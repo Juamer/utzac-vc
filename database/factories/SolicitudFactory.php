@@ -21,9 +21,9 @@ $factory->define(Solicitud::class, function (Faker $faker) {
         'tipo_sol' => $faker->name,
         'materia' => $faker->name,
         'fecha_de_v' => $faker->name,
-        'objetivo_' => $faker->name,
-        'matricula' => $faker->unique(),
-        'solicitud' => $faker->name,
+        'objetivo_G' => $faker->name,
+        'objetivo_E' => $faker->name,
+        'status' => $faker->name,
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'remember_token' => Str::random(10),
     ];

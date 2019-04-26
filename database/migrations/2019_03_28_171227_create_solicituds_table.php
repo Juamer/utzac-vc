@@ -13,19 +13,24 @@ class CreateSolicitudsTable extends Migration
      */
     public function up()
     {
-        Schema::create('solicitudes', function (Blueprint $table) {
+        Schema::create('solicituds', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('fecha');
-            $table->string('tipo_sol');
+            $table->string('visita_conferencia');
+            $table->string('fecha_solicitud');
+            $table->string('carrera');
+            $table->string('grupo');
+            $table->string('num_alumnos');
+            $table->string('prof_solicitante');
             $table->string('materia');
-            $table->string('fecha_de_v');
-            $table->string('objetivo_G');
-            $table->string('objetivo_E');
-            $table->string('status');
-
-
-
-
+            $table->string('nom_empresa');
+            $table->string('domicilio');
+            $table->string('telefono');
+            $table->string('fecha_act');
+            $table->string('objetivos_g');
+            $table->string('objetivos_e');
+            $table->string('asesor_r');
+            $table->string('estado');
+            //$table->bigInteger('user_id');
             $table->timestamps();
         });
     }
@@ -37,6 +42,6 @@ class CreateSolicitudsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('solicitudes');
+        Schema::dropIfExists('solicituds');
     }
 }

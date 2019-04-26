@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\Solicitud as Authenticatable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
 
-class Solicitud extends Authenticatable
+class Solicitud extends Model
 {
     use Notifiable;
 
@@ -16,15 +17,16 @@ class Solicitud extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'fecha', 'tipo_sol', 'materia',  'fecha_de_v', 'objetivp_G', 'objetivo_E', 'status',
+        'visita_conferencia','fecha_solicitud', 'carrera', 'grupo',  'num_alumnos', 'prof_solicitante', 'materia',
+          'nom_empresa', 'domicilio', 'telefono', 'fecha_act', 'objetivos_g', 'objetivos_e', 'asesor_r', 'estado', 
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
+
+    
+
+    
 }

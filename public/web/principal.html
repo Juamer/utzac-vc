@@ -1,160 +1,344 @@
 <!DOCTYPE html>
 <html>
 
-        
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>visitas y conferencias</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>princial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<nav class="pos-f-t2" >
-        <a class="collapse" id="navbarToggleExternalContent" href="Principal.html">UTZAC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                        <a class="nav-link" href="usuarios.html">Usuarios</a>
-                      </li>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#usuarioModal">
-            Registrarme
-          </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                        <a class="nav-link" href="solicitudes.html">Solicitudes</a>
-                        </li>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#usuarioModal">
-            Crear solicitud
-           </button>
 
-    
-                      
-    </div>
-</nav>
+<div class="fixed-top">
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="principal.html">Proceso de visitas y confrenecias</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="solicitudes.html">Solicitudes</a>
+        </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#solicitudModal">
+              Crear solicitud
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link">Usuarios</a>
+                </li>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#usuarioModal">
+                  Registrarme
+                </button>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#loginModal">
+                  Acceder
+                </button>
+
+
+
+
+            </div>
+  </nav>
+</div>
+
+
 
 <body ng-app="utzac_vc" ng-controller="api" style="background-color:gray;">
 
-    <div class="bd-example">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/circuito.jpg" class="d-block w-100" alt="..." width="100" height="550">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>NoMADA</h5>
-                <p>Es una Tarjeta de Grado Industrial para desarrollo de Aplicaciones Mecatrónicas, Sistemas Embebidos e Internet de las Cosas</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/google.jpg" class="d-block w-100" alt="..."  width="100" height="550">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Google</h5>
-                <p>Google es la página web más popular del mundo y el motor de búsqueda más utilizado</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/windows.png" class="d-block w-100" alt="..." width="100" height="550">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Windows</h5>
-                <p>Microsoft Windows es un sistema operativo, es decir, un conjunto de programas que posibilita la administración de los recursos de una computadora</p>
-              </div>
-            </div>
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/circuito.jpg" class="d-block w-100" alt="..." width="100" height="700">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>NoMADA</h5>
+            <p>Es una Tarjeta de Grado Industrial para desarrollo de Aplicaciones Mecatrónicas, Sistemas Embebidos e
+              Internet de las Cosas</p>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+        </div>
+        <div class="carousel-item">
+          <img src="img/emp_google.jpg" class="d-block w-100" alt="..." width="100" height="700">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Google</h5>
+            <p>Google es la página web más popular del mundo y el motor de búsqueda más utilizado</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/windows.png" class="d-block w-100" alt="..." width="100" height="700">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Windows</h5>
+            <p>Microsoft Windows es un sistema operativo, es decir, un conjunto de programas que posibilita la
+              administración de los recursos de una computadora</p>
+          </div>
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="card text-center p-3 mb-2 bg-dark text-white fixed-bottom position-static">
+    <div class="card-header">
+      UTZAC
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">VISITAS Y CONFERENCIAS</h5>
+      <p class="card-text">Contáctenos</p>
+      <p class="card-text"><i class="fas fa-map-marked-alt"></i> Km 5, Carretera Zacatecas, 98601 Cuauhtemoc, Zac.</p>
+      <p class="card-text"><i class="fas fa-phone-volume"></i> 01 492 927 6180</p>
+      <a href="https://es-la.facebook.com/utzac/" class="btn btn-dark"><img
+          src="https://img.icons8.com/ios/50/000000/facebook-filled.png"></a>
+      <a href="http://www.utzac.edu.mx/" class="btn btn-dark">UTZAC</a>
+      <a href="https://www.instagram.com/utzacmx/" class="btn btn-dark"><img
+          src="https://img.icons8.com/ios/50/000000/instagram-new-filled.png"></a>
 
-       <!-- Modal -->
-    <div class="modal fade" id="usuarioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+
+
+    </div>
+
+  </div>
+
+
+  <!-- Modal Solicitud-->
+  <div class="modal fade" id="solicitudModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                    Usuario Nuevo
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Crear solicitud
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <form>
+            <label for="inputState">Solicitud</label>
+            <select id="inputState" class="form-control" ng-model="nuevosDatos.visita_conferencia">
+              <option selected>Visita</option>
+              <option>Conferencia</option>
+            </select>
+          </form>
+            <div class="form-group">
+              <label>Fecha de Solicitud</label>
+              <input ng-model="nuevosDatos.fecha_solicitud" type="date" id="date" class="form-control"
+                placeholder="Escribe la fecha de realización de solicitud">
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input ng-model="user.name" type="text" class="form-control" placeholder="Escribe tu nombre">
-                    </div>
-                    <div class="form-group">
-                        <label>Apellidos</label>
-                        <input ng-model="user.apellidos" type="text" class="form-control" placeholder="Escribe tus apellidos">
-                    </div>
-                    <div class="form-group">
-                        <label>Nombre de usuario</label>
-                        <input ng-model="user.nom_usu" type="text" class="form-control" placeholder="usuario">
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input ng-model="user.email" type="text" class="form-control" placeholder="ejemplo@dominio.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Matricula</label>
-                        <input ng-model="user.matricula" type="text" class="form-control" placeholder="427900567">
-                    </div>
-                    <div class="form-group">
-                        <label>Contrase&ntilde;a</label>
-                        <input ng-model="user.password" type="password" class="form-control"
-                            placeholder="Debe contener 6 caracteres como minimo">
-                    </div>
-                    <div class="form-group">
-                        <label>Contrase&ntilde;a</label>
-                        <input ng-model="user.password_confirmation" type="password" class="form-control"
-                            placeholder="Vuelve a escribir tu Contrase&ntilde;ia">
-                    </div>
-                    <button type="submit" class= "btn btn-block btn-primary btn-xs"
-                        ng-click="CrearUsuario(user)">Guardar
-                    </button>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-block btn-dark btn-xs" data-dismiss="modal">
-                            Cancelar
-                        </button>
-                </form>
+              <form>
+                <label for="inputState">Selecciona la carreara</label>
+                <select id="inputState" class="form-control" ng-model="nuevosDatos.carrera">
+                  <option>Mantenimiento</option>
+                  <option>Industrial</option>
+                  <option>Minas</option>
+                  <option>Mecatrónica</option>
+                  <option>Energías Renovables</option>
+                  <option selected>TIC</option>
+                  <option>Desarrollo de Negocios</option>
+                </select>
+              </form>
+                <div class="form-group">
+                  <label>Grupo</label>
+                  <input ng-model="nuevosDatos.grupo" type="text" class="form-control" placeholder="Escribe el grupo">
+                </div>
+                <div class="form-group">
+                  <label>Número de alumnos</label>
+                  <input ng-model="nuevosDatos.num_alumnos" type="text" class="form-control"
+                    placeholder="Escribe el número de alumnos que asisitirán">
+                </div>
+
+                <div class="form-group">
+                  <label>Profesor Solicitante</label>
+                  <input ng-model="nuevosDatos.prof_solicitante" type="text" class="form-control"
+                    placeholder="Escibe el nombre del docente que solicita">
+                </div>
+                <div class="form-group">
+                  <label>Materia</label>
+                  <input ng-model="nuevosDatos.materia" type="text" class="form-control"
+                    placeholder="Escribe la materia">
+                </div>
+                <div class="form-group">
+                  <label>Nombre de la empresa</label>
+                  <input ng-model="nuevosDatos.nom_empresa" type="text" class="form-control"
+                    placeholder="Escribe el nombre de la empresa a visitar">
+                </div>
+                <div class="form-group">
+                  <label>Domicilio</label>
+                  <input ng-model="nuevosDatos.domicilio" type="text" class="form-control"
+                    placeholder="Escribe el domicilio de la empresa">
+                </div>
+                <div class="form-group">
+                  <label>Teléfono</label>
+                  <input ng-model="nuevosDatos.telefono" type="text" class="form-control"
+                    placeholder="Escribe el teléfono de la empresa">
+                </div>
+                <div class="form-group">
+                  <label>Fecha de actividad</label>
+                  <input ng-model="nuevosDatos.fecha_act" type="date" id="date" class="form-control"
+                    placeholder="Escribe la fecha en que se realizará la actividad">
+                </div>
+                <div class="form-group">
+                  <label>Objetivos generales</label>
+                  <input ng-model="nuevosDatos.objetivos_g" type="text" class="form-control"
+                    placeholder="Escribe los objetivos generales">
+                </div>
+                <div class="form-group">
+                  <label>Objetivos específicos</label>
+                  <input ng-model="nuevosDatos.objetivos_e" type="text" class="form-control"
+                    placeholder="Escribe los objetivos específicos">
+                </div>
+                <div class="form-group">
+                  <label>Asesor responsable</label>
+                  <input ng-model="nuevosDatos.asesor_r" type="text" class="form-control"
+                    placeholder="Escribe el asesor responsable">
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <label for="inputState">Selecciona tu status</label>
+                    <select id="inputState" class="form-control" ng-model="nuevosDatos.estado">
+                      <option>En petición</option>
+                      
+                    </select>
+                  </form>
+                </div>
+
+                <button type="submit" class="btn btn-primary" ng-click="CrearSolicitud(nuevosDatos)">Guardar
+                </button>
+                
+      
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Cancelar
+                </button>
+                  </form>
+                </div>
             </div>
         </div>
+      </div>
     </div>
-</div>
-</div>
-<!--Fin del modal-->
+    <!--Fin del modal-->
+
+    <!-- Modal Login-->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Login
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label>Email</label>
+                <input ng-model="nuevosDatos.email" type="text" class="form-control" placeholder="user123">
+              </div>
+              <div class="form-group">
+                <label>Contrase&ntilde;a</label>
+                <input ng-model="nuevosDatos.password" type="password" class="form-control"
+                  placeholder="Debe contener 8 caracteres como minimo">
+              </div>
+
+              <button type="submit" class="btn btn-primary" ng-click="login(nuevosDatos)">Acceder
+              </button>
+
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Cancelar
+              </button>
 
 
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/angular.min.js"></script>
-    <script src="./js/app.js"></script>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fin del modal-->
+
+  <!-- Modal Usuario-->
+  <div class="modal fade" id="usuarioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Usuario Nuevo
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Nombre</label>
+              <input ng-model="datosNuevos.nombre" type="text" class="form-control" placeholder="Escribe tu nombre">
+            </div>
+            <div class="form-group">
+              <label>Apellidos</label>
+              <input ng-model="datosNuevos.apellidos" type="text" class="form-control"
+                placeholder="Escribe tus apellidos">
+            </div>
+            <div class="form-group">
+              <label>Número de empleado</label>
+              <input ng-model="datosNuevos.num_emp" type="text" class="form-control" placeholder="481700498">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input ng-model="datosNuevos.email" type="text" class="form-control" placeholder="user123">
+            </div>
+
+            <div class="form-group">
+              <label>Contrase&ntilde;a</label>
+              <input ng-model="datosNuevos.password" type="password" class="form-control"
+                placeholder="Debe contener 8 caracteres como minimo">
+              <div class="form-group">
+                <label>Administrador</label>
+                <input ng-model="datosNuevos.administrador" type="text" class="form-control"
+                  placeholder="trur or false">
+              </div>
+              <button type="submit" class="btn btn-primary" ng-click="CrearUsuario(datosNuevos)">Guardar
+              </button>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Cancelar
+                </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--Fin del modal-->
+
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/angular.min.js"></script>
+  <script src="./js/app.js"></script>
 </body>
-
-
 
 </html>

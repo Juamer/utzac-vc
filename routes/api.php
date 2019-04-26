@@ -18,5 +18,10 @@ use Illuminate\Http\Request;
 
 
 });*/
-
+Route::name('me')->get('users/me', 'UserController@me');
+Route::name('login')->post('users/login', 'UserController@login');
 Route::resource('users', 'UserController');
+Route::resource('solicituds', 'SolicitudController');
+Route::resource('empresas', 'EmpresaController');
+Route::resource('carreras', 'CarreraController');
+

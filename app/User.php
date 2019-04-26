@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class User extends Authenticatable
@@ -17,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'apellidos', 'nom_usu',  'email', 'matricula', 'solicitud', 'password',
+        'nombre', 'apellidos', 'num_emp',  'email', 'password',
     ];
 
     /**
@@ -29,12 +30,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function solicitudes()
+    {
+    	return $this->hasMany('App\Solicitud');
+    }
 }
