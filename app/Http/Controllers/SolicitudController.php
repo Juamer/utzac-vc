@@ -60,50 +60,24 @@ public function store(Request $request)
 
 }
     public function destroy($id){
-        $solicituds = Solicitud::findorFail($id);
-        $solicituds->delete();
-        return response()->json(['data'=>$solicituds],200);
+        $solicitud = Solicitud::findorFail($id);
+        $solicitud->delete();
+        return response()->json(['data'=>$solicitud],200);
     }
 
     public function update(Request $request, $id)
     {
         //Buscar al usuario por ID
-        $user = Solicitud::findorFail($id);
+        $solicitud = Solicitud::findorFail($id);
 
           $rules=[
-            'fecha' => 'required,' . $user->id,
-            'password' => 'min:6|confirmed',
-            'admin' => 'in:'.User::USUARIO_ADMINISTRADOR.','.User::USUARIO_REGULAR,
+             $solicitud->id,
+            
           ];
-          $this->validate($request,$rules);
+          
+            $solicitud->save();
 
-          if($request->has('name')){
-            $user->name=$request->name;
-          }
-          if($request->has('email') && $user->email != $request->email){
-            $user->verified = User::USUARIO_NO_VERIFICADO;
-            $user->verification_token = User::generarVerificationToken();
-            $user->email = $request->email;
-          }
-          if($request->has('password')){
-            $user->password = bcrypt($request->password);
-          }
-          /*if(request->has('admin')){
-            $this->allowedAdminAction();
-          }
-            if(!$user->esVerificado()){
-              return $this->errorResponse('Unicamente los usuarios verificados pueden cambiar su valor de administrador',409);
-            }
-
-            $user->admin = $request->admin;
-*/
-            if(!$user->isDirty()){
-              return $this->errorResponse('Se debe especificar el menos un valor para actualizar',422);
-            }
-
-            $user->save();
-
-            return $this->showOne($user);
+            return $this->showOne($solicitud);
     }
 
 }

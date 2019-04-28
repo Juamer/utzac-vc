@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('num_emp')->unique();
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('users_id')->unsigned;
+            
             $table->rememberToken();
             $table->timestamps();
         });

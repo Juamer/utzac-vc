@@ -74,7 +74,7 @@ app.controller('api', function ($scope, $http) {
         };
     }
     
-
+    
     //para eliminar
     $scope.borrar = function (id, index) {
         console.log(url2 + "/" + id)
@@ -89,6 +89,10 @@ app.controller('api', function ($scope, $http) {
             alert("no se pudo eliminar");
         });
     }
+
+    
+
+    
     
 
     $scope.login = function(login){
