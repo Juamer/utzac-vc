@@ -20,8 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('num_emp')->unique();
             $table->string('email')->unique();
             $table->string('password');
-            
-            $table->rememberToken();
+            $table->string('administrador');
+             $table->rememberToken();
             $table->timestamps();
         });
     }

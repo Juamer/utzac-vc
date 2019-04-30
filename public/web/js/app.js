@@ -49,7 +49,7 @@ app.controller('api', function ($scope, $http) {
         };
     }
 
-    $scope.CrearSolicitud = function (nuevosDatos) {
+    $scope.CrearSolicitud = function (nuevosDatos, solicitud) {
         if (nuevosDatos.id == null) {
             //Call the services
             $http.post(url2, JSON.stringify(nuevosDatos)).then(function (response) {
@@ -64,9 +64,10 @@ app.controller('api', function ($scope, $http) {
 
             });
         } else {
-            $http.put(url2 + "/" + solicitud.id, JSON.stringify(solicitud))
+            $http.put(url2 + "/" + nuevosDatos.id, JSON.stringify(nuevosDatos))
                 .then(function (response) {
                     console.log("datos actualizado");
+                    $("#solicitudModal").modal('hide');
                 }, function error(response) {
                     console.log("Error al Actualizar");
                     console.log(response.data);
@@ -88,6 +89,11 @@ app.controller('api', function ($scope, $http) {
             // this function handles error
             alert("no se pudo eliminar");
         });
+    }
+
+    $scope.editar = function (registro) {
+        $scope.nuevosDatos = registro;
+        $("#solicitudModal").modal('show');
     }
 
     
@@ -123,6 +129,7 @@ app.controller('api', function ($scope, $http) {
 
     // datos nuevos
     $scope.nuevoDatos = {};
+    $scope.solicitud = {};
 
 
     // Mostrar sesion

@@ -77,7 +77,7 @@ public function store(Request $request)
           
             $solicitud->save();
 
-            return $this->showOne($solicitud);
+            return response()->json(['data'=>$solicitud],200);
     }
 
 }

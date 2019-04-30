@@ -78,7 +78,7 @@
 
                 <td>
                     <button class="btn btn-dark" type="button" ng-click="borrar(solicitud.id,$index)"><i class="fas fa-trash-alt"></i></button>
-                    <button class="btn btn-light" type="button" data-toggle="modal" data-target="#solicitudactModal"><i class="fas fa-pen-square"></i></i></button>
+                    <button class="btn btn-light" type="button" ng-click="editar(solicitud)"><i class="fas fa-pen-square"></i></button>
                 </td>
             </tr>
         </tbody>
@@ -187,6 +187,9 @@
                   <label for="inputState">Selecciona tu status</label>
                   <select id="inputState" class="form-control" ng-model="nuevosDatos.estado">
                     <option>En petición</option>
+                    <option>En revisión</option>
+                    <option>Aceptado</option>
+                    <option>Rechazado</option>
                     
                   </select>
                 </form>
@@ -314,8 +317,7 @@
                 </form>
               </div>
 
-              <button type="submit" class="btn btn-primary" ng-click="ActualizarSolicitud(nuevosDatos)">Actualizar
-              </button>
+              
               
     
               <button type="button" class="btn btn-secondary" data-dismiss="modal">

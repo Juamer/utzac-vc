@@ -116,7 +116,7 @@
   </div>
 
 
-  <!-- Modal Solicitud-->
+  <!-- Modal Crear Solicitud-->
   <div class="modal fade" id="solicitudModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -314,11 +314,16 @@
               <label>Contrase&ntilde;a</label>
               <input ng-model="datosNuevos.password" type="password" class="form-control"
                 placeholder="Debe contener 8 caracteres como minimo">
-              <div class="form-group">
-                <label>Administrador</label>
-                <input ng-model="datosNuevos.administrador" type="text" class="form-control"
-                  placeholder="trur or false">
-              </div>
+                <div class="modal-body">
+                  <form>
+                    <label for="inputState">Perfil administrador</label>
+                    <select id="inputState" class="form-control" ng-model="nuevosDatos.estado">
+                      <option>True</option>
+                      <option>False</option>
+                      
+                    </select>
+                  </form>
+                </div>
               <button type="submit" class="btn btn-primary" ng-click="CrearUsuario(datosNuevos)">Guardar
               </button>
               <div class="modal-footer">

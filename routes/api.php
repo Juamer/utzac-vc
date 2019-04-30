@@ -24,4 +24,18 @@ Route::resource('users', 'UserController');
 Route::resource('solicituds', 'SolicitudController');
 Route::resource('empresas', 'EmpresaController');
 Route::resource('carreras', 'CarreraController');
+Route::post('login', 'Auth\LoginController@login');
+
+Route::group([
+    'prefix' => 'restricted',
+    'middleware' => 'auth:api',
+], function () {
+
+    // Authentication Routes...
+    Route::get('logout', 'Auth\LoginController@logout');
+
+    Route::get('/test', function () {
+        return 'authenticated';
+    });
+});
 
